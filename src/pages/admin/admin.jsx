@@ -10,6 +10,8 @@ import Category from '../category/category'
 import Product from '../product/product'
 import GeneralOrder from '../general-order/general-order'
 import GiftOrder from '../gift-order/gift-order'
+import Settings from '../settings/settings'
+
 
 // 内存数据
 import memory from '../../utils/memory'
@@ -39,6 +41,7 @@ export default class Admin extends Component {
                             <Route path="/admin/products/product" component={Product}></Route>
                             <Route path="/admin/order/general-order" component={GeneralOrder}></Route>
                             <Route path="/admin/order/gift-order" component={GiftOrder}></Route>
+                            <Route path="/admin/settings" component={Settings}></Route>
                             <Redirect to="/admin/home"></Redirect>
                         </Switch>
                     </Content>

@@ -28,6 +28,10 @@ const menuConfig = [{
         icon: 'gift-order',
         title: '礼物订单'
     }]
+}, {
+    key: '/admin/settings',
+    icon: 'kongzhitai',
+    title: "设置中心"
 }];
 
 export default menuConfig
