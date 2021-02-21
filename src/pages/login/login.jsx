@@ -7,7 +7,7 @@ import storage from 'store'
 import './login.less'
 import logo from "../../assets/images/logo.jpg"
 import { fallbackUrl } from '../../config/index'
-import memory from '../../utils/memory'
+// import memory from '../../utils/memory'
 
 //  接口
 import UserModel from "../../models/user"
@@ -33,7 +33,7 @@ class Login extends Component {
             //  本地存储数据
             const user = userLoginResult;
             storage.set('USER_KEY', user)
-            memory.user = user;
+            // memory.user = user;
 
             //  界面交互
             message.success('成功登录')
@@ -50,7 +50,7 @@ class Login extends Component {
     render() {
 
         //  读取保存的user，存在直接跳转管理界面
-        const user = memory.user;
+        const user = storage.get('USER_KEY') || {}//  memory.user;
 
         if (user.uid) {
             return (<Redirect to='/' />)
@@ -71,7 +71,7 @@ class Login extends Component {
         }
 
         return (
-            <div className="login">
+            <div className="login" >
                 <div className="login-header">
                     <Avatar size={68} src={<Image preview={false} src={logo} alt="logo" fallback={fallbackUrl}></Image>}></Avatar>
                     <h1>小型后台管理系统</h1>

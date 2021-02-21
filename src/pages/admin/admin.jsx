@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Redirect, Route, Switch } from "react-router-dom"
 import { Layout } from "antd"
+import storage from 'store'
+
 import LeftNav from "../../components/left-nav"
 import Header from "../../components/header"
 
@@ -14,14 +16,14 @@ import Settings from '../settings/settings'
 
 
 // 内存数据
-import memory from '../../utils/memory'
+// import memory from '../../utils/memory'
 const { Footer, Sider, Content } = Layout
 
 
 export default class Admin extends Component {
     render() {
         // 读取内存 user，不存在直接跳转到登录界面
-        const user = memory.user;
+        const user = storage.get("USER_KEY")// memory.user;
 
         if (!user.uid) {
             return (<Redirect to='/login' />)
