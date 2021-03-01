@@ -1,35 +1,35 @@
 const menuConfig = [{
-    key: '/admin/home',
+    key: '/home',
     icon: "kongzhitai",
     title: '控制台'
 }, {
-    key: '/admin/products',
+    key: '/products',
     icon: "products",
     title: '商品',
     children: [{
-        key: '/admin/products/category',
+        key: '/products/category',
         icon: "category",
         title: '品类管理'
     }, {
-        key: '/admin/products/product',
+        key: '/products/product',
         icon: "product",
         title: '商品管理'
     }]
 }, {
-    key: '/admin/order',
+    key: '/order',
     icon: "order",
     title: '订单管理',
     children: [{
-        key: '/admin/order/general-order',
+        key: '/order/general-order',
         icon: 'putong',
         title: '普通订单'
     }, {
-        key: '/admin/order/gift-order',
+        key: '/order/gift-order',
         icon: 'gift-order',
         title: '礼物订单'
     }]
 }, {
-    key: '/admin/settings',
+    key: '/settings',
     icon: 'kongzhitai',
     title: "设置中心"
 }];

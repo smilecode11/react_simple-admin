@@ -38,13 +38,13 @@ export default class Admin extends Component {
                     <Header>Header</Header>
                     <Content style={{ background: '#f8f8f8' }}>
                         <Switch>
-                            <Route path="/admin/home" component={Home}></Route>
-                            <Route path="/admin/products/category" component={Category}></Route>
-                            <Route path="/admin/products/product" component={Product}></Route>
-                            <Route path="/admin/order/general-order" component={GeneralOrder}></Route>
-                            <Route path="/admin/order/gift-order" component={GiftOrder}></Route>
-                            <Route path="/admin/settings" component={Settings}></Route>
-                            <Redirect to="/admin/home"></Redirect>
+                            <Route path="/home" component={Home}></Route>
+                            <Route path="/products/category" component={Category}></Route>
+                            <Route path="/products/product" component={Product}></Route>
+                            <Route path="/order/general-order" component={GeneralOrder}></Route>
+                            <Route path="/order/gift-order" component={GiftOrder}></Route>
+                            <Route path="/settings" component={Settings}></Route>
+                            <Redirect to="/home"></Redirect>
                         </Switch>
                     </Content>
                     <Footer>Footer</Footer>
